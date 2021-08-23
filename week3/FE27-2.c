@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+void show(char *s, int x)
+{
+    for(int i = 1 ; i <= x ; i++)
+    {
+        printf("%s",s);
+    }
+}
+
+int main()
+{
+    int x ;
+    printf("enter : ");
+    scanf("%d",&x);
+    
+    for(int i = x ; i >= 1 ; i--)
+    {
+        show("  ",x-i);
+        show("* ",(2*i)-1);
+        show("  ",x-i);
+        printf("\n");
+    }
+    for(int i = 2 ; i <= x ; i++)
+    {
+        show("  ",x-i);
+        show("* ",(2*i)-1 );
+        show("  ",x-i);
+        printf("\n");
+    }
+
+    return 0;
+}
